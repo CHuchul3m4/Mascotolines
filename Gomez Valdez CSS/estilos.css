@@ -1,0 +1,247 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f6f9fc, #e3f2fd);
+    color: #333;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+#agrupar {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* =========================
+   CABECERA
+========================= */
+#cabecera {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Fondo desenfocado */
+#cabecera::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url('./img/uwu.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(4px);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+/* Oscurecedor */
+#cabecera::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+/* Texto encima */
+#cabecera h1,
+#cabecera h2,
+#cabecera h3 {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+#cabecera h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#cabecera h2 {
+    font-weight: 400;
+}
+
+#cabecera h3 {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* =========================
+   MENÚ
+========================= */
+#menu {
+    background: #388e3c;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+#menu li {
+    padding: 15px 25px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#menu li:hover {
+    background: #2e7d32;
+}
+
+/* =========================
+   SECCIÓN
+========================= */
+#seccion {
+    padding: 40px;
+    text-align: center;
+}
+
+#seccion h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #4caf50;
+}
+
+#seccion p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* =========================
+   IMÁGENES
+========================= */
+figure img {
+    border-radius: 15px;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    align-items: start;
+}
+
+/* =========================
+   TARJETAS GENERALES
+========================= */
+.card,
+.tarjeta-raza,
+.panel-doc {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover unificado */
+.card:hover,
+.tarjeta-raza:hover,
+.panel-doc:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   IMÁGENES
+========================= */
+.card img,
+.tarjeta-raza img,
+.bloque-central img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   CONTENIDO INTERNO
+========================= */
+.card h3,
+.tarjeta-raza h3 {
+    padding: 15px 20px 5px;
+    color: #4caf50;
+}
+
+.card p {
+    padding: 0 20px 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* =========================
+   BLOQUE CENTRAL
+========================= */
+.bloque-central {
+    text-align: center;
+}
+
+.bloque-central img {
+    max-width: 420px;
+    border-radius: 20px;
+}
+
+.bloque-central h2 {
+    margin-top: 15px;
+    background: #f0f0f0;
+    display: inline-block;
+    padding: 8px 25px;
+    border-radius: 30px;
+}
+
+/* =========================
+   PANEL DOCUMENTACIÓN
+========================= */
+.panel-doc {
+    padding: 25px;
+    min-height: 350px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+#pie {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
